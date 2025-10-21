@@ -117,19 +117,26 @@ TODO \cite{gaston_moose_2009}
 \end{itemize}
 
 \section{Software description}
-The pyvale sensor simulation module provides a physics agnostic virtual laboratory allowing the user to deploy synthetic sensors on an existing simulation. 
-
-The user workflow is as follows: 1) load multi-physics simulation data, 2) build virtual sensor arrays, 3) run simulated experiments, and 4) visualise and analyse the results.
-
-pyvale supports mesh-based and mesh-free input physics simulations
-
- 
-
+The pyvale sensor simulation module provides a physics agnostic virtual laboratory allowing the user to deploy synthetic sensors on an existing simulation. The user workflow for pyvale is as follows: 1) load multi-physics simulation data, 2) build virtual sensor arrays, 3) run simulated experiments, and 4) visualise and analyse the results.
 
 \subsection{Software architecture}
+Overarching control of the Monte-Carlo simulations is controlled by the ExperimentSimulator. 
 
-%TODO
-- Flow chart figure showing the pyvale sensor simulation module
+The main simulation unit of the pyvale sensor simulation module is a collection of sensors of the same type called a SensorArray which all sample the same physical field. A concrete example in engineering would be an array of thermocouples used to measure the temperature of a component or array of strain gauges used to measure strain at key points at specific orientations. A SensorArray implements the following measurement model: $M = T + E_{s} + E_{r}$ where $M$ is the simulated measurement, $T$ is the ground truth, $E_{s}$ is the total effect of all systematic errors and $E_{r}$ is the total effect of all random errors. The ground truth is calculated by interpolating the physical field of the input physics simulation. The errors to be modelled are specified by the user in a list of error calculators which are evaluated in the specified order for each Monte-Carlo simulation run which is executed using the 'calc_measurements()' method of the SensorArray.
+
+user can build a series of different sensor arrays sampling the same or different physical fields and pass  
+
+The pyvale sensor simulation module is built by leveraging the existing python scientific computing stack including numpy [REF], scipy [REF], matplotlib [REF]. Additional simulation visualisation tools are provided by pyvista [REF]. Results are returned as numpy arrays allowing for interoperability. 
+
+\subsubsection{Input Physics & Fields}
+
+
+pyvale supports mesh-based and mesh-free input physics simulations including input from plain text files for both cases. 
+
+\subsubsection{Error Integration}
+
+
+In pyvale errors are classed as 
 
 
 \subsection{Software functionalities}
