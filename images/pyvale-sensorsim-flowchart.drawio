@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.7">
+  <diagram name="Page-1" id="9y5q2BfYTT_uNguP28J0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NK3rLZwL-NUgdiZMGAay-1" value="Sensor positions:&lt;div&gt;np.array&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="U6hV8L5RCMHZddL2J_SA-1" value="Sample times:&lt;div&gt;np.array | None&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="U6hV8L5RCMHZddL2J_SA-2" value="Abstract: &lt;i&gt;Field&lt;/i&gt;&lt;div&gt;FieldScalar&lt;/div&gt;&lt;div&gt;FieldVector&lt;/div&gt;&lt;div&gt;FieldTensor&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="210" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U6hV8L5RCMHZddL2J_SA-3" value="Class:&lt;div&gt;SensorArray&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="379" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="U6hV8L5RCMHZddL2J_SA-4" value="Class:&lt;div&gt;ErrorIntegrator&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="379" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="U6hV8L5RCMHZddL2J_SA-5" value=".get_measurements()" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="589" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="U6hV8L5RCMHZddL2J_SA-6" value=".calc_measurements()" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="589" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="U6hV8L5RCMHZddL2J_SA-16" value="DataClass:&lt;div&gt;SensorData&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="U6hV8L5RCMHZddL2J_SA-17" value="&lt;div&gt;DataClass:&lt;/div&gt;SimData" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
